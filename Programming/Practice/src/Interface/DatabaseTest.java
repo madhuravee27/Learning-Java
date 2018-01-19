@@ -11,6 +11,7 @@ public class DatabaseTest {
         String dbName = br.readLine();
         try{
             Class c = Class.forName(dbName);
+            System.out.println(c);
             Database db = (Database)c.newInstance();
             db.connect();
             db.disconnect();
